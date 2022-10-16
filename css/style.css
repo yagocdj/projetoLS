@@ -1,0 +1,14 @@
+/* Variables */
+:root {
+    --gray-1: #262626;
+}
+
+nav {
+    width: 100vw;
+    background-color: var(--gray-1);
+}
+
+nav > div {
+    width: 100vw;
+    height: 5em;
+}
