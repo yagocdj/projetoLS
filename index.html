@@ -25,7 +25,7 @@
             </div>
             <div class="offcanvas offcanvas-body"></div>
                 <nav class="d-flex justify-content-between">
-                    <ul class=" ps-0 d-grid mt-3 w-100" style="row-gap: 1.5rem;">
+                    <ul class=" ps-0 d-grid mt-3 w-100">  <!-- style="row-gap: 1.5rem;" -->
                         <li class="btn text-white mt-4 lighter-color">
                             <span class="material-symbols-outlined fs-1">
                                 Timer
@@ -50,18 +50,16 @@
             <!-- offcanvas component end -->
         <main class="container d-flex flex-row justify-content-center align-items-center">
             <div class="time-card px-3 py-2">
-                <h2>Time goes here</h2>
+                <h2 class="mt-5">Time goes here</h2>
                 <div class="d-flex justify-content-center gap-3 mt-5">
-                    <button type="button" id="start-count">Text A</button>
-                    <button type="button" id="reset-count">Text B</button>
+                    <button type="button" id="start-count">Start</button>
+                    <button type="button" id="reset-count">Reset</button>
                 </div>
             </div>
         </main>
 
-        <footer>
-
+        <footer id="page-footer" class="bg-dark">
+            <p>Our page's footer</p>
         </footer>
-
-
     </body>
 </html>
