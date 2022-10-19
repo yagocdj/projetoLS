@@ -3,8 +3,22 @@
     --gray-1: #262626;
 }
 
+main {
+    height: 80vh;
+    width: 100vw;
+}
+
 #offcanvas{
     max-width: 40%;
+}
+
+.lighter-color:hover {
+    background-color: #555;
+}
+
+.time-card {
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 /* #header{
