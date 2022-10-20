@@ -1,6 +1,7 @@
 /* Variables */
 :root {
     --gray-1: #515151;
+    --gray-2: ;
     --dark-bg-txt-color: #ddd;
     height: 100vh;
     width: 100vw;
@@ -24,6 +25,10 @@ main {
 }
 
 #page-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     text-align: center;
     /* background-color: var(--gray-1); */
     color: var(--dark-bg-txt-color);
@@ -31,3 +36,7 @@ main {
 
 /* #header{
 } */
+
+/* 
+array de paíes map em cada um deles
+*/
