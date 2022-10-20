@@ -17,69 +17,54 @@
                 <span class="material-symbols-outlined fs-2">Menu</span>
             </button>
         </div>
-<<<<<<< Updated upstream
-        <div class="offcanvas offcanvas-end show text-bg-dark pt-4" data-bs-scroll="true" tabindex="-1" id="offcanvas">
-            <div class="offcanvas offcanvas-body"></div>
-                <nav class="d-flex justify-content-center">
-                    <ul class=" ps-0 d-grid" style="row-gap: 1.5rem;">
-                        <button class="btn btn-dark">
-                            <li class="text-white mt-5 mb-5">
-                                <span class="material-symbols-outlined fs-1">
-                                    Timer
-                                </span>
-                                <h2 class="fs-4">Cronômetro</h2>
-                            </li>
-                        </button>
-                        <li class="btn text-white mt-5 mb-5">
-=======
         <!-- offcanvas component -->
-        <div class="offcanvas offcanvas-start show text-bg-dark pt-4" data-bs-scroll="true" tabindex="-1" id="offcanvas">
-            <div class="container d-flex flex-row-reverse">
-                <button type="button" class="btn-close text-reset d-flex align-items-center" data-bs-dismiss="offcanvas" aria-label="Close" id="OffCanvasClose">
-                <span class="material-symbols-outlined">Close</span>
-                </button>
+        <div class="offcanvas offcanvas-start text-bg-dark pt-2" data-bs-scroll="true" tabindex="-1" id="offcanvas">
+            <div class="d-flex flex-row-reverse mb-3 me-2">
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-header p-2  d-flex justify-content-center">
+                <div class="offcanvas-header d-flex justify-content-center p-2">
                 <h2 class="offcanvas-title" id="offcanvasLabel">MENU</h2>
             </div>
-            <div class="offcanvas offcanvas-body"></div>
+            <div class="offcanvas-body">
                 <nav class="d-flex justify-content-between">
                     <ul class=" ps-0 d-grid mt-3 w-100">  <!-- style="row-gap: 1.5rem;" -->
-                        <li class="btn text-white mt-4">
+                        <li class="btn">
                             <span class="material-symbols-outlined fs-1">
                                 Timer
                             </span>
                             <h3 class="fs-6"><a href="#" class="nav-link">Cronômetro</a></h3>
                         </li>
-                        <li class="btn text-white mt-4">
->>>>>>> Stashed changes
+                        <li class="btn">
                             <span class="material-symbols-outlined fs-1">
                                 Hourglass_bottom
                             </span>
-                            <h2 class="fs-4">Temporizador</h2>
+                            <h3 class="fs-6"><a href="#" class="nav-link">Temporizador</a></h3>
                         </li>
-<<<<<<< Updated upstream
-                        <li class="btn text-white mt-5 mb-5">
-=======
-                        <li class="btn text-white mt-4">
->>>>>>> Stashed changes
+                        <li class="btn">
                             <span class="material-symbols-outlined fs-1">
                                 Public
                             </span>
-                            <h2 class="fs-4">Relógio Mundial</h2>
+                            <h3 class="fs-6"><a href="#" class="nav-link">Relógio Mundial</a></h3>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <main>
-
+            <!-- offcanvas component end -->
+        <main class="container d-flex flex-row justify-content-center align-items-center">
+            <div class="time-card px-3 py-2">
+                <h2 class="mt-5 text-center"><time id=chronometer>00:00:00</time></h2>
+                <div class="d-flex justify-content-center gap-3 mt-5">
+                    <button type="button" id="start-count" class="btn btn-success">Start</button>
+                    <button type="button" id="stop-count" class="btn btn-danger">Stop</button>
+                    <button type="button" id="reset-count" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+            <div></div>
         </main>
 
-        <footer>
-
+        <footer id="page-footer" class="bg-dark">
+            <p>Our page's footer</p>
         </footer>
-
-
     </body>
 </html>
