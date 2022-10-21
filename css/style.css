@@ -2,8 +2,8 @@
 :root {
     --black-1: #1b1b1a;
     --orange-1: #FFA500;
-    --gray-1: #514538;
-    --gray-2: #B8A99A;
+    --gray-1: #383735;
+    --gray-2: #aab7bf;
     --dark-bg-txt-color: #ddd;
     --gradient-1: linear-gradient(to right bottom, #ffa500, #fe9a00, #fc8e00, #fa8200, #f87600);
     height: 100vh;
@@ -29,6 +29,15 @@ main {
 
 div.offcanvas nav ul li.btn{
     color: var(--dark-bg-txt-color);
+    font-size: 2rem;
+}
+
+li h3 {
+    font-size: 1.7rem;
+}
+
+li span{
+    font-size: 4rem !important;
 }
 
 div.offcanvas nav ul li.btn:hover{
@@ -37,7 +46,10 @@ div.offcanvas nav ul li.btn:hover{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    transform-origin: 50%;
+    transition-delay: 100ms;
 }
+
 
 button span{
     color: var(--dark-bg-txt-color);

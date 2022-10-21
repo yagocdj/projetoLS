@@ -27,7 +27,7 @@ function add() {
     tick();
     timerElement.textContent = (hrs > 9 ? hrs : "0" + hrs) 
         	 + ":" + (min > 9 ? min : "0" + min)
-       		 + ":" + (sec > 9 ? sec : "0" + sec);
+       		 + ":" + (sec > 9 ? sec : "0" + sec);  
     timer();
 }
 
@@ -36,11 +36,14 @@ function timer() {
     t = setTimeout(add, 1000);
 }
 
-timer();
+
 startButton.onclick = timer;
+
 stopButton.onclick = function() {
     clearTimeout(t);
 }
+
+
 resetButton.addEventListener('click', function() {
     timerElement.textContent = "00:00:00";
     seconds = 0; minutes = 0; hours = 0;

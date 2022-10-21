@@ -19,32 +19,36 @@
         </div>
         <!-- offcanvas component -->
         <div class="offcanvas offcanvas-start text-bg-dark pt-2" data-bs-scroll="true" tabindex="-1" id="offcanvas">
-            <div class="d-flex flex-row-reverse mb-3 me-2">
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="d-flex flex-row-reverse mb-1 me-2">
+                <button type="button" class="btn text-reset fs-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
             </div>
-                <div class="offcanvas-header d-flex justify-content-center p-2">
-                <h2 class="offcanvas-title" id="offcanvasLabel">MENU</h2>
+            <div class="offcanvas-header d-flex justify-content-center p-0 ">
+                <h2 class="offcanvas-title fs-1" id="offcanvasLabel">MENU</h2>
             </div>
             <div class="offcanvas-body">
-                <nav class="d-flex justify-content-between">
-                    <ul class=" ps-0 d-grid mt-3 w-100">  <!-- style="row-gap: 1.5rem;" -->
+                <nav class="d-flex">
+                    <ul class=" ps-0 d-grid mt-3 fw-bold w-100" style="row-gap: 2.5rem;">
                         <li class="btn">
-                            <span class="material-symbols-outlined fs-1">
+                            <span class="material-symbols-outlined">
                                 Timer
                             </span>
-                            <h3 class="fs-6"><a href="#" class="nav-link">Cronômetro</a></h3>
+                            <h3>Cronômetro</h3>
                         </li>
                         <li class="btn">
-                            <span class="material-symbols-outlined fs-1">
+                            <span class="material-symbols-outlined">
                                 Hourglass_bottom
                             </span>
-                            <h3 class="fs-6"><a href="#" class="nav-link">Temporizador</a></h3>
+                            <h3>Temporizador</h3>
                         </li>
                         <li class="btn">
-                            <span class="material-symbols-outlined fs-1">
+                            <span class="material-symbols-outlined">
                                 Public
                             </span>
-                            <h3 class="fs-6"><a href="#" class="nav-link">Relógio Mundial</a></h3>
+                            <h3>Relógio Mundial</h3>
                         </li>
                     </ul>
                 </nav>
