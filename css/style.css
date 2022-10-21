@@ -60,7 +60,6 @@ button span:hover{
 }
 
 .time-card {
-    min-width: 25%;
     position: relative;
     padding: 10px 20px;
     background: var(--black-1);
