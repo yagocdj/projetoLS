@@ -10,6 +10,11 @@
     width: 100vw;
 }
 
+@font-face {
+    font-family: 'Digital';
+    src: url('../fonts/DS-DIGIB.TTF');
+}
+
 body{
     background-color: var(--black-1);
 }
@@ -43,12 +48,40 @@ button span:hover{
 }
 
 .time-card {
-    border: 1px solid var(--dark-bg-txt-color);
+    min-width: 25%;
+    position: relative;
+    padding: 10px 20px;
+    background: var(--black-1);
+    margin: 5px;
     border-radius: 5px;
-}
+  }
+  
+  .time-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px;
+    border-radius: inherit;
+    background-image: var(--gradient-1);
+  }
+
+/* .time-card {
+    border: 1px solid;
+    border-radius: 20%;
+    border-image: var(--gradient-1) 1;
+} */
 
 #chronometer{
-    color: var(--dark-bg-txt-color);
+    font-family: 'Digital';
+    font-size: 5rem;
+    background-image: var(--gradient-1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 #page-footer {
