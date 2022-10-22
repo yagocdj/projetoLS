@@ -1,5 +1,7 @@
 // the following variables won't be user as global variables because it's not pratical
 
+let mainBody = document.querySelector('body');
+
 let timerElement = document.querySelector('#chronometer');
 let startButton = document.querySelector('#start-count');
 let stopButton = document.querySelector('#stop-count');
@@ -54,3 +56,23 @@ resetButton.addEventListener('click', function() {
 
 // TODO - make the chronometer start only when the user click on the start button
 // TODO - make reset button reset the chronometer even if chornometer is 
+
+
+
+//Functions for make pages
+
+function insertChronometer(){
+    const chronometer = `<main class="container d-flex flex-row justify-content-center align-items-center">
+    <div class="time-card px-3 py-2">
+        <h2 class="mt-5 text-center"><time id=chronometer>00:00:00</time></h2>
+        <div class="d-flex justify-content-center gap-3 mt-4 mb-2">
+            <button type="button" id="start-count" class="btn btn-success">Start</button>
+            <button type="button" id="stop-count" class="btn btn-danger">Stop</button>
+            <button type="button" id="reset-count" class="btn btn-secondary">Reset</button>
+        </div>
+    </div>
+    <div></div>
+</main>`
+
+mainBody.insertAdjacentHTML('afterbegin', chronometer)
+}

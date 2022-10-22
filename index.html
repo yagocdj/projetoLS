@@ -29,10 +29,10 @@
             <div class="offcanvas-header d-flex justify-content-center p-0 ">
                 <h2 class="offcanvas-title fs-1" id="offcanvasLabel">MENU</h2>
             </div>
-            <div class="offcanvas-body">
+            <div class="offcanvas-body d-flex align-itens-center justify-content-center mt-5">
                 <nav class="d-flex">
                     <ul class=" ps-0 d-grid mt-3 fw-bold w-100" style="row-gap: 2.5rem;">
-                        <li class="btn">
+                        <li class="btn" onclick="insertChronometer(event)">
                             <span class="material-symbols-outlined">
                                 Timer
                             </span>
@@ -55,17 +55,6 @@
             </div>
         </div>
             <!-- offcanvas component end -->
-        <main class="container d-flex flex-row justify-content-center align-items-center">
-            <div class="time-card px-3 py-2">
-                <h2 class="mt-5 text-center"><time id=chronometer>00:00:00</time></h2>
-                <div class="d-flex justify-content-center gap-3 mt-4 mb-2">
-                    <button type="button" id="start-count" class="btn btn-success">Start</button>
-                    <button type="button" id="stop-count" class="btn btn-danger">Stop</button>
-                    <button type="button" id="reset-count" class="btn btn-secondary">Reset</button>
-                </div>
-            </div>
-            <div></div>
-        </main>
 
         <footer id="page-footer" class="bg-dark">
             <p>Our page's footer</p>
