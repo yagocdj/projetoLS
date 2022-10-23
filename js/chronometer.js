@@ -4,6 +4,9 @@ let timerElement = document.querySelector('#chronometer');
 let startButton = document.querySelector('#start-count');
 let stopButton = document.querySelector('#stop-count');
 let resetButton = document.querySelector('#reset-count');
+let tableBody = document.querySelector('tbody');
+let saveButton = document.querySelector('#save-count');
+let milisec = 0;
 let sec = 0;
 let min = 0;
 let hrs = 0;
@@ -12,14 +15,17 @@ let clicked = false;  // this variable allows the start button to be pressed onl
 
 // tick funtion - work with hours, minutes and seconds
 function tick() {
-    sec++;
-    if (sec >= 60) {
+    if (milisec < 100) {
+        milisec++;
+    } else if (sec < 60) {
+        milisec = 0;
+        sec++;
+    } else if (min < 60) {
         sec = 0;
         min++;
-        if (min >= 60) {
-            min = 0;
-            hrs++;
-        }
+    } else {
+        min = 0;
+        hrs++
     }
 }
 
@@ -28,13 +34,14 @@ function add() {
     tick();
     timerElement.textContent = (hrs > 9 ? hrs : "0" + hrs)
         	 + ":" + (min > 9 ? min : "0" + min)
-       		 + ":" + (sec > 9 ? sec : "0" + sec);
+       		 + ":" + (sec > 9 ? sec : "0" + sec)
+             + ":" + (milisec > 9 ? milisec : "0" + milisec);
     timer();
 }
 
 // timer function - update the time every 1s (1000ms)
 function timer() {
-    t = setTimeout(add, 1000);
+    t = setTimeout(add, 10);
 }
 
 
@@ -52,15 +59,25 @@ stopButton.addEventListener('click',function() {
 
 
 resetButton.addEventListener('click', function() {
-    isOn = 0;
-    timerElement.textContent = "00:00:00";
-    /* seconds = 0; minutes = 0; hours = 0; */
+    timerElement.textContent = "00:00:00:00";
+    milisec = 0;
     sec = 0;
     min = 0;
     hrs = 0;
 });
 
-//Functions for make pages
+// Functions for make dinamic elements
+
+// TODO - dinamic element (using map function) to insert rows on the table
+// TODO - create and update a dataset that contains all the of the saved times
+
+function registerTime(lap, time) {
+    
+}
+
+saveButton.addEventListener('click', function() {
+    tableBody.innerHTML = ``;
+});
 
 /* function insertChronometer(){
     const chronometer = `<main class="container d-flex flex-row justify-content-center align-items-center">
