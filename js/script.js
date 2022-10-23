@@ -1,6 +1,4 @@
-// the following variables won't be user as global variables because it's not pratical
-
-let mainBody = document.querySelector('body');
+/* let mainBody = document.querySelector('body'); */
 
 let timerElement = document.querySelector('#chronometer');
 let startButton = document.querySelector('#start-count');
@@ -10,6 +8,7 @@ let sec = 0;
 let min = 0;
 let hrs = 0;
 let t;
+let clicked = false;  // this variable allows the start button to be pressed only when the chronometer is off
 
 // tick funtion - work with hours, minutes and seconds
 function tick() {
@@ -27,9 +26,9 @@ function tick() {
 // add function - place the time inside the tag
 function add() {
     tick();
-    timerElement.textContent = (hrs > 9 ? hrs : "0" + hrs) 
+    timerElement.textContent = (hrs > 9 ? hrs : "0" + hrs)
         	 + ":" + (min > 9 ? min : "0" + min)
-       		 + ":" + (sec > 9 ? sec : "0" + sec);  
+       		 + ":" + (sec > 9 ? sec : "0" + sec);
     timer();
 }
 
@@ -39,29 +38,31 @@ function timer() {
 }
 
 
-startButton.onclick = timer;
+startButton.addEventListener('click', function() {
+    if (!clicked) {
+        timer();
+    }
+    clicked = true;
+});
 
-stopButton.onclick = function() {
+stopButton.addEventListener('click',function() {
     clearTimeout(t);
-}
+    clicked = false;
+});
 
 
 resetButton.addEventListener('click', function() {
+    isOn = 0;
     timerElement.textContent = "00:00:00";
-    seconds = 0; minutes = 0; hours = 0;
-    sec = 0
-    min = 0
-    hr = 0
+    /* seconds = 0; minutes = 0; hours = 0; */
+    sec = 0;
+    min = 0;
+    hrs = 0;
 });
-
-// TODO - make the chronometer start only when the user click on the start button
-// TODO - make reset button reset the chronometer even if chornometer is 
-
-
 
 //Functions for make pages
 
-function insertChronometer(){
+/* function insertChronometer(){
     const chronometer = `<main class="container d-flex flex-row justify-content-center align-items-center">
     <div class="time-card px-3 py-2">
         <h2 class="mt-5 text-center"><time id=chronometer>00:00:00</time></h2>
@@ -75,4 +76,4 @@ function insertChronometer(){
 </main>`
 
 mainBody.insertAdjacentHTML('afterbegin', chronometer)
-}
+} */

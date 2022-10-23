@@ -24,7 +24,7 @@ main {
 }
 
 #offcanvas{
-    max-width: 40%;
+    max-width: 45%;
 }
 
 div.offcanvas nav ul li.btn{
@@ -32,19 +32,19 @@ div.offcanvas nav ul li.btn{
     font-size: 2rem;
 }
 
-li h3 {
+/* li h3 {
     font-size: 1.7rem;
-}
+} */
 
 li span{
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
 }
 
 div.offcanvas nav ul li.btn:hover{
     background-size: 80%;
     background-image: var(--gradient-1);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     transform-origin: 50%;
     transition-delay: 100ms;
@@ -61,9 +61,7 @@ button span:hover{
 
 .time-card {
     position: relative;
-    padding: 10px 20px;
     background: var(--black-1);
-    margin: 5px;
     border-radius: 5px;
   }
   
@@ -86,12 +84,12 @@ button span:hover{
     border-image: var(--gradient-1) 1;
 } */
 
-#chronometer{
+#chronometer {
     font-family: 'Digital';
     font-size: 5rem;
     background-image: var(--gradient-1);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
