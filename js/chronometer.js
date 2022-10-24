@@ -15,16 +15,16 @@ let clicked = false;  // this variable allows the start button to be pressed onl
 
 // tick funtion - work with hours, minutes and seconds
 function tick() {
-    if (milisec < 100) {
+    if (milisec < 99) {
         milisec++;
-    } else if (sec < 60) {
+    } else if (sec < 59) {
         milisec = 0;
         sec++;
-    } else if (min < 60) {
-        sec = 0;
+    } else if (min < 59) {
+        sec = -1;
         min++;
     } else {
-        min = 0;
+        min = -1;
         hrs++
     }
 }
@@ -39,9 +39,9 @@ function add() {
     timer();
 }
 
-// timer function - update the time every 1s (1000ms)
+// timer function - update the time every 10ms
 function timer() {
-    t = setTimeout(add, 10);
+    t = setTimeout(add, 10);  // 10ms
 }
 
 
