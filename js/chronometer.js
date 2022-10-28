@@ -15,17 +15,18 @@ let clicked = false;  // this variable allows the start button to be pressed onl
 
 // tick funtion - work with hours, minutes and seconds
 function tick() {
-    if (milisec < 99) {
-        milisec++;
-    } else if (sec < 59) {
-        milisec = 0;
+    milisec++
+    if (milisec == 100) {
         sec++;
-    } else if (min < 59) {
-        sec = -1;
+        milisec = 0;
+    }
+    if (sec == 60) {
         min++;
-    } else {
-        min = -1;
-        hrs++
+        sec = 0;
+    }
+    if (min == 60) {
+        hrs++;
+        min = 0;
     }
 }
 
