@@ -6,8 +6,6 @@ let timerElement = document.querySelector('#stopwatch');
 let startButton = document.querySelector('#start-count');
 let stopButton = document.querySelector('#stop-count');
 let resetButton = document.querySelector('#reset-count');
-let removeSavedTimes = document.querySelectorAll('#reset-saved');
-let tableBody = document.querySelector('tbody');
 let saveButton = document.querySelector('#save-count');
 
 let milisec = 0;
@@ -56,7 +54,7 @@ function insertLap(lap, time) {
         <td id="lap-${lap}"></td>
     </tr>
     `;
-
+    const tableBody = document.querySelector('tbody');
     tableBody.insertAdjacentHTML('beforeend', lapElement);
 }
 
@@ -79,6 +77,20 @@ resetButton.addEventListener('click', () => {
     sec = 0;
     min = 0;
     hrs = 0;
+    arrayOfLaps = [1];
+    const tableElement = document.querySelector('table');
+    const tableInnerHTML = `
+    <thead>
+        <tr>
+            <th>Volta</th>
+            <th>Duração</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- The table content goes here -->
+    </tbody>
+    `;
+    tableElement.innerHTML = tableInnerHTML;
 });
 
 saveButton.addEventListener('click', () => {
