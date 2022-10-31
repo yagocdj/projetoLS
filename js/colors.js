@@ -1,26 +1,29 @@
 import colors from './model/dataset.js';
 
-function getUserColor(colorId) {
-    
+function switchColor(hrefToCss) {
     let colorLink = document.querySelector('#color-link');
+    colorLink.innerHTML = `<link rel="stylesheet" href="${hrefToCss}" id="color-link">`;
+}
 
-    if (colorId === 'red') {
-        colorLink.innerHTML = `<link rel="stylesheet" href="css/colors/red.css" id="color-link">`;
-    } else if (colorId === 'orange') {
-        colorLink.innerHTML = `<link rel="stylesheet" href="css/colors/orange.css" id="color-link">`;
-    } else if (colorId === 'green') {
-        colorLink.innerHTML = `<link rel="stylesheet" href="css/colors/green.css" id="color-link">`;
+function getColorPath(colorName) {
+    const dataset = colors;
+    let href = '';
+    for (const color of dataset) {
+        if (color.color_name === colorName) {
+            href = color.href_to_css;
+        }
     }
+    return href;
 }
 
 document.querySelector('#red').addEventListener('click', () => {
-    getUserColor('red');
+    switchColor(getColorPath('red'));
 });
 
 document.querySelector('#orange').addEventListener('click', () => {
-    getUserColor('orange');
+    switchColor(getColorPath('orange'));
 });
 
 document.querySelector('#green').addEventListener('click', () => {
-    getUserColor('green');
+    switchColor(getColorPath('green'));
 });
