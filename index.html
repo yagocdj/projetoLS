@@ -9,14 +9,36 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="css/colors/orange.css" id="color-link">
         <title>Web time</title>
     </head>
     <body>
-        <div class="container d-flex flex-row-reverse" id="header">
+        <!-- <div class="container d-flex flex-row-reverse" id="header">
             <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
                 <span class="material-symbols-outlined fs-2">Menu</span>
             </button>
-        </div>
+        </div> -->
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-muted" href="#" id="our-brand">Web time</a>
+                <div class="d-flex flex-row gap-3">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                        <span class="material-symbols-outlined fs-2">Menu</span>
+                    </button>
+                    <a class="nav-link dropdown-toggle pt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="material-symbols-outlined" id="color-icon">palette</span></a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#" role="button" id="red">red</a></li>
+                        <li><a class="dropdown-item" href="#" role="button" id="orange">orange</a></li>
+                        <li><a class="dropdown-item" href="#" role="button" id="green">green</a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <!-- offcanvas component -->
         <div class="offcanvas offcanvas-start text-bg-dark pt-2" data-bs-scroll="true" tabindex="-1" id="offcanvas">
             <div class="d-flex flex-row-reverse mb-1 me-2">
@@ -55,6 +77,7 @@
             </div>
         </div>
         <!-- offcanvas component end -->
+        
         <!-- main start -->
         <main class="container d-flex flex-column justify-content-center align-items-center">
             <div class="time-card px-3 py-2">
@@ -67,7 +90,7 @@
                     <button type="button" id="save-count" class="btn btn-dark">Save</button>
                 </div>
             </div>
-            <div id="save-times" class="container d-flex flex-column gap-5">
+            <div id="save-times" class="container d-flex flex-column justify-content-between gap-5">
                 <table>
                     <thead>
                         <tr>
@@ -88,13 +111,14 @@
             <div>
         </main>
         <!-- main end -->
-        <footer id="page-footer" class="bg-dark">
-            <article>
+        <footer id="page-footer" class="bg-dark container">
+            <article class="p-3">
                 <section>
-                    <h3>Bla bla bla</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, commodi, quis quam unde fuga aperiam nihil sit officia esse ipsa ducimus iusto voluptatem quo veniam eius, voluptate sequi recusandae odio?</p>
+                    <h3>About us</h3>
+                    <p>Web time is a tool that you can use everywhere and anywhere. You don't need do install any kind of apps that consumes your device's internal storage. Just type in our URL and use our tool!</p>
                 </section>
             </article>
         </footer>
+    <script type="module" src="js/colors.js"></script>
     </body>
 </html>

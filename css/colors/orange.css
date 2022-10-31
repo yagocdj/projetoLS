@@ -1,0 +1,12 @@
+:root {
+    --gradient-1: linear-gradient(to right bottom, #ffa500, #fe9a00, #fc8e00, #fa8200, #f87600);
+    --txt-color: #FFA500;
+}
+
+div.offcanvas nav ul li.btn:hover, .time-card::after, #stopwatch {
+    background-image: var(--gradient-1);
+}
+
+#save-times {
+    color: var(--txt-color);
+}
