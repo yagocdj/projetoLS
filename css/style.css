@@ -23,7 +23,7 @@ body {
 main {
     margin-top: 1.5em;
     height: 80%;
-    gap: 4.2em;
+    gap: 4em;
 }
 
 #offcanvas{
@@ -99,11 +99,7 @@ button span:hover{
 }
 
 #page-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 20%;
+    margin-top: 5.1em;
     text-align: center;
     overflow: auto;
     /* background-color: var(--gray-1); */
@@ -133,4 +129,8 @@ table th, table td {
 
 #our-brand, #color-icon {
     color: var(--dark-bg-txt-color) !important;
+}
+
+article {
+    max-width: 500px;
 }
